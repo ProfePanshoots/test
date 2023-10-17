@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+    <ion-buttons slot="end">
+      <ion-button [disabled]="!terminosAceptados" color="danger" (click)="dismissModal()" fill="outline">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <h1>Términos y Condiciones de Uso de NBAAPP</h1>
+
+    <p>Bienvenido a NBAAPP.</p>
+
+    <p>Por favor, lee detenidamente estos Términos y Condiciones de Uso ("Términos") antes de usar nuestra aplicación móvil "NBAAPP" ("la Aplicación") y nuestros servicios relacionados ("los Servicios"). Estos Términos rigen tu acceso y uso de la Aplicación y los Servicios. Si no estás de acuerdo con estos Términos, no deberías utilizar la Aplicación ni los Servicios.</p>
+
+    <h2>1. Aceptación de los Términos</h2>
+    <p>Al acceder o utilizar la Aplicación y los Servicios, aceptas cumplir con estos Términos y todas las leyes y regulaciones aplicables. Si no estás de acuerdo con estos Términos, no puedes utilizar la Aplicación ni los Servicios.</p>
+
+    <h2>2. Cambios en los Términos</h2>
+    <p>Nos reservamos el derecho de modificar o cambiar estos Términos en cualquier momento. Cualquier modificación será efectiva inmediatamente después de la publicación de los Términos actualizados en la Aplicación. Tu uso continuado de la Aplicación y los Servicios después de dichas modificaciones constituye tu aceptación de los Términos modificados.</p>
+
+    <h2>3. Uso de la Aplicación</h2>
+    <p>Estás autorizado a utilizar la Aplicación y los Servicios únicamente para fines legítimos. No debes utilizar la Aplicación para ningún propósito ilegal o no autorizado.</p>
+
+    <h2>4. Privacidad</h2>
+    <p>Tu uso de la Aplicación y los Servicios está sujeto a nuestra Política de Privacidad, que se encuentra en [enlace a la Política de Privacidad]. Al utilizar la Aplicación y los Servicios, aceptas nuestras prácticas de privacidad.</p>
+
+    <h2>5. Derechos de Propiedad Intelectual</h2>
+    <p>La Aplicación y todos los contenidos, características y funcionalidades asociados con la Aplicación y los Servicios son propiedad de NBAAPP y están protegidos por las leyes de derechos de autor y otras leyes de propiedad intelectual. No tienes derecho a reproducir, distribuir, modificar o crear trabajos derivados de ningún contenido de la Aplicación sin nuestro permiso.</p>
+
+    <h2>6. Limitación de Responsabilidad</h2>
+    <p>La Aplicación y los Servicios se proporcionan "tal cual" y "según disponibilidad". No ofrecemos garantías de ningún tipo con respecto a la disponibilidad, exactitud o idoneidad de la Aplicación y los Servicios para un propósito particular. No seremos responsables por daños directos, indirectos, incidentales, especiales o consecuentes resultantes del uso o la incapacidad de usar la Aplicación y los Servicios.</p>
+
+    <h2>7. Terminación</h2>
+    <p>Podemos, a nuestra discreción, suspender o terminar tu acceso a la Aplicación y los Servicios en cualquier momento y por cualquier motivo, sin previo aviso.</p>
+
+    <h2>8. Contacto</h2>
+    <p>Si tienes preguntas sobre estos Términos y Condiciones de Uso, puedes ponerte en contacto con nosotros en [dirección de contacto].</p>
+
+    <p>Fecha de entrada en vigencia: [Fecha de entrada en vigencia]</p>
+
+    <p>Gracias por usar NBAAPP.</p>
+  <ion-item>
+    <ion-label class="ion-text-wrap" for="terms">Aceptas los términos y condiciones para usar nuestra aplicación?</ion-label>
+    <ion-checkbox id="terms" (ionChange)="onTermsChanged($event)" [(ngModel)]="canDismiss"></ion-checkbox>
+  </ion-item>
+</ion-content>

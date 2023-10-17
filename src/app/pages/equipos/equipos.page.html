@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>equipos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list *ngFor="let aux of digimones">
+    <ion-item>
+      <ion-card [routerLink]="'/detallecard/'+aux.id">
+        <img src="{{aux.image}}" alt="">
+        <ion-card-header>
+          <ion-card-title>{{aux.name}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="cargarMasData()"> Mas </ion-button>
+  <ion-button (click)="cargarAnteriorPagina()"> Anterior</ion-button>
+  <ion-button (click)="cargarSiguientePagina()"> Siguiente</ion-button>
+  
+</ion-content>

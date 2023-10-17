@@ -1,0 +1,12 @@
+.centered-image {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .centered-text {
+    text-align: center; /* Centra el texto horizontalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }

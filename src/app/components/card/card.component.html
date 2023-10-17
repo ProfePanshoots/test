@@ -1,0 +1,22 @@
+<ion-card>
+  <img alt="Silhouette of mountains" src="https://media-cldnry.s-nbcnews.com/image/upload/newscms/2020_05/3204601/200128-kobe-bryant-cover-section-tease.jpg" />
+  <ion-card-header *ngIf="mostrarHeader">
+    <ion-card-title>{{titulo}}</ion-card-title>
+    <ion-card-subtitle>{{fecha}}</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    <h6>Cantidad de campeonatos:</h6>
+    <div *ngIf="cantidad > 0" class="ordenado">
+      <div *ngFor="let aux of timesArray(cantidad)">
+        <ion-icon name="trophy-outline" color="warning"></ion-icon>
+      </div>
+    </div>
+    <div *ngIf="cantidad === 0" class="ordenado">
+      <ion-icon name="sad-outline" color="danger"></ion-icon>
+      <p style="color:red">No tiene.</p>
+    </div>
+    {{descripcion}}
+  </ion-card-content>
+  <ion-button *ngIf="mostrarBoton" (click)="detalle()" size="full"  fill="outline" color="success" shape="round">Ver más...</ion-button>
+</ion-card>

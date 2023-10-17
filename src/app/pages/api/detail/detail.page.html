@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <img class="centered-image" alt="Silhouette of mountains" src="{{this.imagen}}" />
+    <ion-card-header class="centered-text">
+      <ion-card-title> {{ jugador.nombre }}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content class="centered-text">
+      {{ jugador.genero }}
+    </ion-card-content>
+  </ion-card>
+  <ion-button (click)="generateQRCode()" expand="full" fill="outline">
+    {{ qrCodeGenerated ? 'Cerrar QR Code' : 'Generar QR Code' }}
+  </ion-button>
+  <ion-img [src]="qrCodeImageUrl" *ngIf="qrCodeImageUrl"></ion-img>
+  <ion-button [routerLink]="['/apiupdate', jugador.id]">Actualizar</ion-button>
+  <ion-button (click)="deleteJugador()">Eliminar</ion-button>
+</ion-content>
